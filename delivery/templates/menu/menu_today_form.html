@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <table class"table table-bordered">
+    <thead>
+    <tr>
+        <td>#</td>
+        <td>options</td>        
+        <td>action</td>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    {% if menudays %}
+    {% for menu in menudays %}
+    <tr>
+        <td>{{ menu.id}}</td>
+        <td>{{ menu.options}}</td>        
+        <td>
+        {% if level == '1' %}
+        <a class="btn btn-primary" href="{% url 'menu_edit' menu.id %}"> 
+        Edit</a>
+        {% endif %}
+    
+        </td>
+    </tr>
+    {% endfor %}
+
+    {% else %}
+    <h1>no row</h1>
+    {% endif %}
+
+    </tbody>
+    </table>
+
+{% endblock %}

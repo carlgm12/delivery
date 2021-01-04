@@ -1,0 +1,12 @@
+*Instalación:
+-descomprimir la zip
+-instalar python en el sistema operativo de preferencia.
+-Actualizar el pip con el siguiente comando:
+python -m pip install --upgrade pip
+-instalar django en SO de preferencia
+pip install Django
+-Ubicarce en la carpeta delivery y correr el siguiente commando:
+python manage.py runserver.
+*Ejecucion:
+Abrir el siguiente link:
+http://127.0.0.1:8000/ 
